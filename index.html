@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="BandApp">
+<head>
+    <title>The Band</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <style type="text/css">
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">Swing Crew</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/about">About</a></li>
+                <li><a href="#/booking">Bookings</a></li>
+                <li><a href="#/contact">Contact</a></li>
+                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#/media">Media<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="music">Music</a></li>
+                        <li><a href="videos">Videos</a></li>
+                        <li><a href="photos">Photos</a></li>
+                    </ul>           
+            </ul>
+        </div>
+    </nav>
+
+    <div ng-view>
+
+    </div>
+
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>    
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>    
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/service.js"></script>
+    <script src='js/directive.js'></script>
+</body>
+</html>
+
+
+
+

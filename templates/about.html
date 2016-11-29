@@ -1,0 +1,51 @@
+<h1>Band Members</h1>
+  <div class="container" ng-app="BandApp">
+    <div>
+      <ul>
+        <li ng-repeat="member in members">
+          <img ng-src={{"member.img" alt="member.name"}} class="pull-left">
+          <h4>{{member.name}}</h4>
+          <div class="paragraph">
+            <p>Lorem ipsum...</p>
+          </div>          
+        </li>          
+      </ul>
+        <div class="paragraph">
+          <p>Lorem ipsum...</p>
+        </div>
+    </div>
+  </div>
+
+<div>
+  <h3> Subsribe for updates</h3>     
+    <form class="form-horizontal" name="subscribeform" novalidate role="form">
+      <div class="form-group" ng-class="{ 'has-error' : form.name.$invalid && form.name.$dirty }">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-8">
+          <input type="text" name="name" id="name" class="form-control" ng-model="obj.name" required>
+          <p ng-show="form.name.$invalid && form.name.$dirty" class="help-block">Name is required</p>
+        </div>
+      </div>
+      <div class="form-group" ng-class="{ 'has-error' : form.username.$invalid }">
+        <label for="username" class="col-sm-2 control-label">Username</label>
+        <div class="col-sm-8">
+          <input type="text" name="username" id="username" class="form-control" ng-model="obj.username"
+                 ng-minlength="3" ng-maxlength="8">
+          <p ng-show="form.username.$invalid" class="help-block">Username must be between 3 and 8 characters</p>
+        </div>
+      </div>
+      <div class="form-group" ng-class="{ 'has-error' : form.email.$invalid }">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-8">
+          <input type="email" name="email" id="email" class="form-control" ng-model="obj.email">
+          <p ng-show="form.email.$invalid" class="help-block">Email is not valid</p>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-8">
+          <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid" ng-click="submit()">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>

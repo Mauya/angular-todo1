@@ -1,0 +1,37 @@
+<h2>For Special Events Make a Booking Here!</h2><br />
+
+<div class="container">
+  <form class="form-horizontal" name= "booking" id="bookingform" method="post" nonvalidate="nonvalidate">
+    <div class="form-group" ng-class="{ 'has-error' : form.name.$invalid && form.name.$dirty }">
+      <label for="name" class="col-sm-2 control-label">Name:</label>
+      <div class="col-sm-8">
+      <input type="text" id="name" name="name" class="form-control" ng-model="obj.name" required>
+      <p ng-show="form.name.$invalid && form.name.$dirty" class="help-block">Name is required</p>
+    </div>
+    <div class="form-group" ng-class="{'has-error':form.email.$invalid}">
+      <label for="email" class="col-sm-2" control-label="">Email Address:</label>
+      <div class="col-sm-8">
+      <input type="email" id="email" name="email" class="form-control" ng-model="obj.email">
+      <p ng-show="form.email.$invalid" class="help-block">Email is not valid</p>
+    </div>
+    <div class="form-group">
+      <label for="telephone" class="col-sm-2" control-label>Contact Number:</label>
+      <input type="tel" id="phone" name="phone" class="form-control" ng-model="obj.phone">
+    </div>
+
+    <div class="form-group">
+      <label for="booking">Bookings:</label>
+  <select id="events" name="Events" ng-model="eventList">
+    <option value="Wedding">Wedding</option>
+    <option value="Corporate">Corporate</option>
+    <option value="Other">Social</option>
+  </select>
+    </div>
+    <div class="form-group">
+      <label for="Message">Message:</label>
+      <textarea name="Message"></textarea>
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+</div>  
+  

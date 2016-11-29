@@ -1,0 +1,22 @@
+{
+  "name": "angular-todo",
+  "version": "1.0.0",
+  "description": "Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mauya/angular-todo.git"
+  },
+  "keywords": [
+    "Angular"
+  ],
+  "author": "Sandra Kadungure",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mauya/angular-todo/issues"
+  },
+  "homepage": "https://github.com/Mauya/angular-todo#readme"
+}
