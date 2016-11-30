@@ -47,9 +47,10 @@ angular.module('RouteControllers', [])
         "img":"/images/member5.jpg"
       }  
     ]
-    $scope.subscribe = {
+
+  $scope.subscribe = {
     name: null
-  };
+  }
   $scope.submit = function() {
     if ($scope.form.$valid) {
       alert('Awesome!');
