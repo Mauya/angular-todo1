@@ -1,25 +1,23 @@
 angular.module('RouteControllers', [])
-
     .controller('HomeController', function($scope) {
-        $scope.title = "Swing Crew"
-
+        $scope.title = "Welcome To Swing Crew!";    
         $scope.myInterval = 3000;
-        $scope.slides = [ 
-        {
-            image: 'images/swing1.jpg'
-        },
-        {
-            image: 'images/swing2.jpg'
-        },
-        {
-            image: 'images/swing3.jpg'
-        },
-        {
-            image: 'images/swing4.jpg'
-        }
-        ]
-
-  })
+        $scope.slides= [
+          {
+              image: 'images/swing1.jpg'
+          },
+          {
+              image: 'images/swing2.jpg'
+          },
+          {
+              image: 'images/swing3.jpg'
+          },
+          {
+              image: 'images/swing4.jpg'
+          }
+        ];
+      })
+    
   .controller('AboutController', function($scope){
     $scope.members=[
       {
