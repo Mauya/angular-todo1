@@ -1,49 +1,49 @@
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
         $scope.title = "Welcome To Swing Crew!";    
-        $scope.myInterval = 3000;
+        $scope.myInterval = 5000;
         $scope.slides= [
           {
-              image: 'images/swing1.jpg'
+              image: "images/swing1.jpg"
           },
           {
-              image: 'images/swing2.jpg'
+              image: "images/swing2.jpg"
           },
           {
-              image: 'images/swing3.jpg'
+              image: "images/swing3.jpg"
           },
           {
-              image: 'images/swing4.jpg'
-          }
+              image: "images/swing4.jpg"
+          },
         ];
       })
     
   .controller('AboutController', function($scope){
     $scope.members=[
       {
-      "name":"memberAll",
-      "img":"/images/members1.jpg"
-      },
-
-      {
-        "name":"member1",
-        "img":"/images/member2.jpg"
+      "name":"member1",
+      "img":"images/member1.jpg"
       },
 
       {
         "name":"member2",
-        "img":"/images/member3.jpg"
-      },
-      
-      {
-        "name":"member3",
-        "img":"/images/member4.jpg"
+        "img":"images/member2.jpg"
       },
 
       {
+        "name":"member3",
+        "img":"images/member3.jpg"
+      },
+      
+      {
         "name":"member4",
-        "img":"/images/member5.jpg"
-      }  
+        "img":"images/member4.jpg"
+      },
+
+      {
+        "name":"member5",
+        "img":"images/member5.jpg"
+      },  
     ]
 
   $scope.subscribe = {

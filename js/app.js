@@ -1,9 +1,8 @@
 
 var app = angular.module('BandApp', ['ngRoute', 'RouteControllers']);
  
-app.config(function($routeProvider) {
- 
-    $routeProvider.when('/', {
+app.config(function($routeProvider, $locationProvider) { 
+    $routeProvider.when('/home', {
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
     })
@@ -34,6 +33,7 @@ app.config(function($routeProvider) {
     .when('/photos', {
         templateUrl: 'templates/photo.html',
         controller: 'PhotosController'
-    });
+    })
+    $locationProvider.html5Mode(true);
 });
 

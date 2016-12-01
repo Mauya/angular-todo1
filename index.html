@@ -3,25 +3,17 @@
 <head>
     <title>The Band</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
+    <base href="/" />
     <style type="text/css">
         body {
             padding-top: 70px;
         }
-        #slides_control {
-            height: 200px;
+        #slide{
+            width:200px;
+            height:200px;
+            overflow:hidden;
+            position:relative;
         }
-        img{
-            margin:auto;
-            width: 400px;
-        }
-        #slides_control {
-            position:absolute;
-            width: 400px;
-            left:50%;
-            top:20px;
-            margin-left:-200px;
-            }
     </style>
 </head>
 <body>
@@ -31,11 +23,11 @@
                 <a class="navbar-brand" href="#/">Swing Crew</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#/">Home</a></li>
-                <li><a href="#/about">About</a></li>
-                <li><a href="#/booking">Bookings</a></li>
-                <li><a href="#/contact">Contact</a></li>
-                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#/media">Media<span class="caret"></span></a>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="booking">Bookings</a></li>
+                <li><a href="contact">Contact</a></li>
+                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="media">Media<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="music">Music</a></li>
                         <li><a href="videos">Videos</a></li>
