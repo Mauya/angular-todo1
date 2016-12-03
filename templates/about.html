@@ -1,51 +1,65 @@
-<div class="container" ng-controller="AboutController">
-  <div>
-    <h3>{{title}}</h3>
-  </div>
+<h3>Band Members</h3>
+<div class="container">
+  <div ng-controller="AboutController">   
     <div class="row">
-      <div class="col-sm-8 col-sm-offset-2"
-    <ul>
-      <li ng-repeat="member in members">{{members.img}}
-        <img ng-src="members.img" alt="member.name" class="img-thumnail img-responsive" id="about-image" id="about">
-        <h4>{{member.name}}</h4>
-        <div class="paragraph">
-          <p>Lorem ipsum...</p>
-        </div>          
-      </li>          
-    </ul>
-</div>
-  
+      <div class="col-sm-8 col-sm-offset-2">
+        <ul>
+          <li ng-repeat="member in members">
+            <img ng-src="member.image" alt="member.name" class="img-thumnail img-responsive" id="about-image" img="pull-left">
+            <h4>{{member.name}}</h4>
+            <div class="paragraph">
+              <p>Lorem ipsum...</p>
+            </div>          
+          </li>          
+        </ul>
+      </div> 
+    </div>
 
-<div>
-  <h3> Subsribe for updates</h3>     
-    <form class="form-horizontal" name="subscribeform" novalidate role="form">
-      <div class="form-group" ng-class="{ 'has-error' : form.name.$invalid && form.name.$dirty }">
-        <label for="name" class="col-sm-2 control-label">Name</label>
-        <div class="col-sm-6">
-          <input type="text" name="name" id="name" class="form-control" ng-model="obj.name" required>
-          <p ng-show="form.name.$invalid && form.name.$dirty" class="help-block">Name is required</p>
+  <div>
+    <h3> Subsribe for updates</h3>     
+      <form class="form-horizontal" name="subscribeform" novalidate role="form">
+        <div class="form-group" ng-class="{ 'has-error' : form.name.$invalid && form.name.$dirty }">
+          <label for="name" class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-6">
+            <input type="text" name="name" id="name" class="form-control" ng-model="obj.name" required>
+            <p ng-show="form.name.$invalid && form.name.$dirty" class="help-block">Name is required</p>
+          </div>
         </div>
-      </div>
-      <div class="form-group" ng-class="{ 'has-error' : form.username.$invalid }">
-        <label for="username" class="col-sm-2 control-label">Username</label>
-        <div class="col-sm-6">
-          <input type="text" name="username" id="username" class="form-control" ng-model="subscribe.username"
-                 ng-minlength="3" ng-maxlength="6">
-          <p ng-show="form.username.$invalid" class="help-block">Username must be between 3 and 8 characters</p>
+        <div class="form-group" ng-class="{ 'has-error' : form.username.$invalid }">
+          <label for="username" class="col-sm-2 control-label">Username</label>
+          <div class="col-sm-6">
+            <input type="text" name="username" id="username" class="form-control" ng-model="subscribe.username"
+                   ng-minlength="3" ng-maxlength="6">
+            <p ng-show="form.username.$invalid" class="help-block">Username must be between 3 and 8 characters</p>
+          </div>
         </div>
-      </div>
-      <div class="form-group" ng-class="{ 'has-error' : form.email.$invalid }">
-        <label for="email" class="col-sm-2 control-label">Email</label>
-        <div class="col-sm-6">
-          <input type="email" name="email" id="email" class="form-control" ng-model="subscribe.email">
-          <p ng-show="form.email.$invalid" class="help-block">Email is not valid</p>
+        <div class="form-group" ng-class="{ 'has-error' : form.email.$invalid }">
+          <label for="email" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-6">
+            <input type="email" name="email" id="email" class="form-control" ng-model="subscribe.email">
+            <p ng-show="form.email.$invalid" class="help-block">Email is not valid</p>
+          </div>
         </div>
-      </div>
-      
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-6">
-          <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid" ng-click="submit()">Submit</button>
+        
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-6">
+            <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid" ng-click="submit()">Submit</button>
+          </div>
         </div>
+      </form>
+    </div>
+      <div class="row">
+        <div class=col-sm-2 col-sm-offset-3>
+          <a href="twitter.com" class="btn btn-info btn-block"></a>
+            <i class="fa fa-twitter fa-5x"></i>   
+        </div>
+          <div class=col-sm-2>
+            <a href="facebook.com" class="btn btn-primary btn-block"></a>
+            <i class="fa fa-facebook fa-5x"></i>
+          </div>
+          <div class="col-sm-2">
+            <a href="youtube.com" class="btn btn-danger btn-block"></a>
+            <i class="fa fa-youtube fa-5x"></i>
+          </div>
       </div>
-    </form>
-  </div>
+</div>

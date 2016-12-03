@@ -1,7 +1,6 @@
 
-var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap','720kb.socialshare']);
- 
-  angular.module('BandApp').config(function($routeProvider, $locationProvider){ 
+var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'FortAwesome/Font-Awesome':'*'])
+ angular.module('BandApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){ 
     $routeProvider.when('/home', {
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
@@ -32,12 +31,12 @@ var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstra
     })
     .when('/photos', {
         templateUrl: 'templates/photo.html',
-        controller: 'PhotosController'
-    })
+        controller: 'PhotoController'
+    })    
     .otherwise({
         redirectTo: "/home"
-    })
+    });
 
     $locationProvider.html5Mode({enabled:true,requirebase:false});
-});
+}])
 

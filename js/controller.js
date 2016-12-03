@@ -23,51 +23,42 @@ angular.module('RouteControllers', [])
       };
     })
     
-  .controller(['AboutController', 'socialshare' function($scope, $socialshare){
+  .controller(['AboutController', function($scope){
     $scope.members=[
       {
-      "name":"member1",
-      "img":"images/member1.jpg"
+      "name":"member one",
+      "image":"images/member1.jpg"
       },
 
       {
-        "name":"member2",
-        "img":"images/member2.jpg"
+        "name":"member Two",
+        "image":"images/member2.jpg"
       },
 
       {
-        "name":"member3",
-        "img":"images/member3.jpg"
+        "name":"member Three",
+        "image":"images/member3.jpg"
       },
       
       {
-        "name":"member4",
-        "img":"images/member4.jpg"
+        "name":"member Four",
+        "image":"images/member4.jpg"
       },
 
       {
-        "name":"member5",
-        "img":"images/member5.jpg"
+        "name":"member Five",
+        "image":"images/member5.jpg"
       },  
     ]
-  $scope.members=members
-
-  $scope.subscribe = {
+    $scope.subscribe = {
     name: null
   }
   $scope.submit = function() {
     if ($scope.form.$valid) {
       alert('Awesome!');
     }
-  }
-  $Socialshare.share=function(){
-      'providers':'twitter', 'facebook', 'youtube',
-      'attrs': {
-        'socialshareUrl': 'http://720kb.net'
-      }
-    };
-}])
-
+  };
+  }])
 .controller("BookingController", function($scope){
     $scope.bookigTitle="For Special Events Make a Booking Here!";
     $scope.booking.name = "Name";
@@ -81,8 +72,7 @@ angular.module('RouteControllers', [])
     }
 })
 
-
-.controller("MediaController", function(){
+.controller("MediaController", function($Scope){
 
 var media = [
 {
