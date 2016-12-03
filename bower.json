@@ -25,6 +25,7 @@
     "angular-bootstrap": "^2.3.0"
   },
   "dependencies": {
-    "angular-socialshare": "angularjs-socialshare#^2.3.3"
+    "angular-socialshare": "angularjs-socialshare#^2.3.3",
+    "font-awesome": "^4.7.0"
   }
 }
