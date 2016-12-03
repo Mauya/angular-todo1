@@ -1,5 +1,5 @@
 angular.module('RouteControllers', [])
-    .controller('HomeController', function($scope) {
+    .controller('HomeController', function($scope){
         $scope.title = "Welcome To Swing Crew!";    
         $scope.myInterval = 5000;
         $scope.slides= [
@@ -17,8 +17,13 @@ angular.module('RouteControllers', [])
           },
         ];
       })
+    .controller('navController', function($scope,$location){
+      $scope.isactive= function(destination){
+        return destination === $location.path();
+      };
+    })
     
-  .controller('AboutController', function($scope){
+  .controller(['AboutController', 'socialshare' function($scope, $socialshare){
     $scope.members=[
       {
       "name":"member1",
@@ -45,6 +50,7 @@ angular.module('RouteControllers', [])
         "img":"images/member5.jpg"
       },  
     ]
+  $scope.members=members
 
   $scope.subscribe = {
     name: null
@@ -54,11 +60,25 @@ angular.module('RouteControllers', [])
       alert('Awesome!');
     }
   }
-})
+  $Socialshare.share=function(){
+      'providers':'twitter', 'facebook', 'youtube',
+      'attrs': {
+        'socialshareUrl': 'http://720kb.net'
+      }
+    };
+}])
 
+.controller("BookingController", function($scope){
+    $scope.bookigTitle="For Special Events Make a Booking Here!";
+    $scope.booking.name = "Name";
+    $scope.booking.email = "Email";
+    $scope.booking.phone = "phone";
+    $scope.booking.date = "date";
+    $scope.booking.message = "message";
 
-.controller("BookingsController", function(){
-
+    $scope.submitForm = function () {
+      console.info("Here I should implement the logic to send a request to the server.");
+    }
 })
 
 
@@ -78,10 +98,10 @@ var media = [
 })
 
 .controller("ContactController", function(){
-  var Contact = {
+  var contact = {
     address:"22 Old Lane, Dublin, Ireland TY6 LP16,",
     email:"symphonycrew@sc.ie",
     telephone: "xx xxx xxxx"
   };
-  $scope.Contact=Contact;
+  $scope.contact=contact;
 });

@@ -1,7 +1,7 @@
 
-var app = angular.module("BandApp", ["ngRoute", "RouteControllers", "ui.bootstrap"]);
+var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap','720kb.socialshare']);
  
-app.config(function($routeProvider, $locationProvider) { 
+  angular.module('BandApp').config(function($routeProvider, $locationProvider){ 
     $routeProvider.when('/home', {
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
@@ -37,6 +37,7 @@ app.config(function($routeProvider, $locationProvider) {
     .otherwise({
         redirectTo: "/home"
     })
-    $locationProvider.html5Mode(true);
+
+    $locationProvider.html5Mode({enabled:true,requirebase:false});
 });
 

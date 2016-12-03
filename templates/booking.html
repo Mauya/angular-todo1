@@ -1,9 +1,9 @@
-<div>
+<div ng-controller="BookingController">
   <h2>{{BookingTitle}}</h2>
 </div><br />
 
 <div class="booking-form container">
-  <form class="form-group" ng-controller="BookingsController" name= "bookingform" id="bookingform" method="post" novalidate="novalidate" ng-submit="bookingform.$valid && handleFormSubmit(booking)">
+  <form class="form-group" name= "bookingform" id="bookingform" method="post" novalidate="novalidate" ng-submit="bookingform.$valid && handleFormSubmit(booking)">
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
@@ -11,12 +11,16 @@
         <input type="text" id="name" name="name" class="form-control" ng-model="booking.name" placeholder=" Full Name" required=""/>
       </div>
     </div>
+  </div>
+  <div class="row">
     <div class="col-sm-6">    
       <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" class="form-control" ng-model="booking.email" placeholder="Email" required="" />
       </div>
     </div>
+  </div>
+  <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
         <label for="telephone">Phone Number:</label>
@@ -29,7 +33,7 @@
       <div class="form-group">
         <label for="requiredDate">Date Required</label>
         <p class="input-group">
-          <input type="text" class="form-control" datepicker-popup="{{format}}" is-open="opened" date="Date" datepicker-options="dateOptions" date-disabled="(date, mode)" ng-model="booking.Date" name="date" id="date" ng-required="true" close-text="close" ng-click="open($event)" />
+          <input type="text" class="form-control" datepicker-popup="{{format}}" is-open="opened" date="Date" datepicker-options="dateOptions" date-disabled="(date, mode)" ng-model="booking.date" name="date" id="date" ng-required="true" close-text="close" ng-click="open($event)" />
           <span class="input-group-btn">
           <button type="button" class="btn btn-default" ng-click="open($event)">
           <i class="glyphicon glyphicon-calendar"></i>            
@@ -42,7 +46,7 @@
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="booking">Bookings:</label>
+        <label for="booking">Booking:</label>
       <select class="form-control" id="event" name="event" ng-model="eventList">
         <option value="Wedding">Wedding</option>
         <option value="Corporate">Corporate</option>
@@ -50,12 +54,14 @@
       </select>
       </div>
     </div>
+  <div class="row"
     <div class="col-sm-6">
       <div class="form-group">
         <label for="message">Message:</label>
         <textarea name="message" id="message" ng-model="booking-message" cols="30" rows="5" placeholder="Event type, event address, duration requirements, other specific information"></textarea>
       </div>
     </div>
+  </div>
     <div class="form-group">
       <button type="submit" value="Submit" ng-disabled="bookingform.$invalid" class="btn btn-default">Make a Booking</button>
     </div>
