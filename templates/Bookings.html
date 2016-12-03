@@ -1,37 +1,68 @@
-<h2>For Special Events Make a Booking Here!</h2><br />
+<div>
+  <h2>{{BookingTitle}}</h2>
+</div><br />
 
-<div class="container">
-  <form class="form-horizontal" name= "booking" id="bookingform" method="post" nonvalidate="nonvalidate">
-    <div class="form-group" ng-class="{ 'has-error' : form.name.$invalid && form.name.$dirty }">
-      <label for="name" class="col-sm-2 control-label">Name:</label>
-      <div class="col-sm-8">
-      <input type="text" id="name" name="name" class="form-control" ng-model="obj.name" required>
-      <p ng-show="form.name.$invalid && form.name.$dirty" class="help-block">Name is required</p>
+<div class="booking-form container">
+  <form class="form-group" ng-controller="BookingsController" name= "bookingform" id="bookingform" method="post" novalidate="novalidate" ng-submit="bookingform.$valid && handleFormSubmit(booking)">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="name"> Name: </label>      
+        <input type="text" id="name" name="name" class="form-control" ng-model="booking.name" placeholder=" Full Name" required=""/>
+      </div>
     </div>
-    <div class="form-group" ng-class="{'has-error':form.email.$invalid}">
-      <label for="email" class="col-sm-2" control-label="">Email Address:</label>
-      <div class="col-sm-8">
-      <input type="email" id="email" name="email" class="form-control" ng-model="obj.email">
-      <p ng-show="form.email.$invalid" class="help-block">Email is not valid</p>
+    <div class="col-sm-6">    
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" ng-model="booking.email" placeholder="Email" required="" />
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="telephone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" class="form-control" ng-model="booking.phone" placeholder="telephone" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="requiredDate">Date Required</label>
+        <p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" is-open="opened" date="Date" datepicker-options="dateOptions" date-disabled="(date, mode)" ng-model="booking.Date" name="date" id="date" ng-required="true" close-text="close" ng-click="open($event)" />
+          <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="open($event)">
+          <i class="glyphicon glyphicon-calendar"></i>            
+          </button>            
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="booking">Bookings:</label>
+      <select class="form-control" id="event" name="event" ng-model="eventList">
+        <option value="Wedding">Wedding</option>
+        <option value="Corporate">Corporate</option>
+        <option value="Other">Social</option>
+      </select>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" ng-model="booking-message" cols="30" rows="5" placeholder="Event type, event address, duration requirements, other specific information"></textarea>
+      </div>
     </div>
     <div class="form-group">
-      <label for="telephone" class="col-sm-2" control-label>Contact Number:</label>
-      <input type="tel" id="phone" name="phone" class="form-control" ng-model="obj.phone">
+      <button type="submit" value="Submit" ng-disabled="bookingform.$invalid" class="btn btn-default">Make a Booking</button>
     </div>
-
-    <div class="form-group">
-      <label for="booking">Bookings:</label>
-  <select id="events" name="Events" ng-model="eventList">
-    <option value="Wedding">Wedding</option>
-    <option value="Corporate">Corporate</option>
-    <option value="Other">Social</option>
-  </select>
-    </div>
-    <div class="form-group">
-      <label for="Message">Message:</label>
-      <textarea name="Message"></textarea>
-    </div>
-    <input type="submit" value="Submit">
+  </div>
   </form>
+</div>
 </div>  
-  
+<div ng-show="message">
+  <p>Form submitted succesfully! Thank you for contacting us. We aim to respond to all enquiries within 24hrs. </p>
+</div> 
