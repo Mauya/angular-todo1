@@ -1,5 +1,5 @@
 
-var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'FortAwesome/Font-Awesome':'*'])
+var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'mediaPlayer','FortAwesome/Font-Awesome':'*'])
  angular.module('BandApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){ 
     $routeProvider.when('/home', {
         templateUrl: 'templates/home.html',

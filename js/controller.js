@@ -86,6 +86,8 @@ var media = [
 }]
   $scope.media=media;
 })
+.controller('MusicController', function ($scope) .....)
+
 
 .controller("ContactController", function(){
   var contact = {
