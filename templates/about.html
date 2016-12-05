@@ -1,12 +1,11 @@
 <h3>Band Members</h3>
 <div class="container">
-  <div ng-controller="AboutController">   
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
+  <div ng-controller="AboutController">  
         <ul>
           <li ng-repeat="member in members">
-            <img ng-src="member.image" alt="member.name" class="img-thumnail img-responsive" id="about-image" img="pull-left">
-            <h4>{{member.name}}</h4>
+            <img ng-src="member.image" alt="member.name" class="img-thumnail img-responsive" id="about-image">
+            <h5>{{member.name}}</h5>
+              {{member.img}}
             <div class="paragraph">
               <p>Lorem ipsum...</p>
             </div>          
