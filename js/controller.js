@@ -1,5 +1,5 @@
 angular.module('RouteControllers', [])
-    .controller('HomeController', function($scope){
+    .controller('HomeController',['$scope', function($scope){
         $scope.title = "Welcome To Swing Crew!";    
         $scope.myInterval = 5000;
         $scope.slides= [
@@ -16,7 +16,7 @@ angular.module('RouteControllers', [])
             image: "images/swing4.jpg"
           }
         ];
-      })
+      }])
     .controller('navController', function($scope,$location){
       $scope.isactive= function(destination){
         return destination === $location.path();

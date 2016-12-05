@@ -1,6 +1,6 @@
 
-var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'mediaPlayer','FortAwesome/Font-Awesome':'*'])
- angular.module('BandApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){ 
+var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'mediaPlayer', 'picardy.fontawesome']);
+ angular.module('BandApp').config(function($routeProvider, $locationProvider){ 
     $routeProvider.when('/home', {
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
@@ -38,5 +38,5 @@ var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstra
     });
 
     $locationProvider.html5Mode({enabled:true,requirebase:false});
-}])
+})
 

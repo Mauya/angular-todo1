@@ -1,17 +1,28 @@
 <div ng-controller="HomeController" id="slides_control">
-<div>
-    <h2>{{title}}</h2>
-</div>
+	<div>
+    	<h2 class="title">{{title}}</h2>
+	</div>
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <carousel interval="myInterval">
         <slide id="slide" ng-repeat="slide in slides" active="slide.active">
-        <img ng-src={{slide.image}}>        
+        <img ng-src={{slide.image}} alt="{{slide.image}}">  <div class="carousel-caption">
+            <h4>Slide {{$index+1}}</h4>
+            <p>{{slide.text}}</p>
+          </div>      
       	</slide>
-	 </carousel>
-  </div>
-</div>
+	  </carousel>
+  	</div>
+	</div>
 </div>
  
-  
+  <!--<a class="left carousel-control" href="image-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="image-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> 
 
