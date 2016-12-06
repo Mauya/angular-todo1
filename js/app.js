@@ -1,6 +1,6 @@
 
 var app = angular   
-    .module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'mediaPlayer', 'picardy.fontawesome'])
+    .module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'picardy.fontawesome'])
     .config(function($routeProvider, $locationProvider){ 
     $routeProvider
     .when('/home', {
