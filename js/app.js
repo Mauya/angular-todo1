@@ -1,7 +1,9 @@
 
-var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'mediaPlayer', 'picardy.fontawesome']);
- angular.module('BandApp').config(function($routeProvider, $locationProvider){ 
-    $routeProvider.when('/home', {
+var app = angular   
+    .module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'mediaPlayer', 'picardy.fontawesome'])
+    .config(function($routeProvider, $locationProvider){ 
+    $routeProvider
+    .when('/home', {
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
     })
@@ -35,8 +37,8 @@ var app = angular.module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstra
     })    
     .otherwise({
         redirectTo: "/home"
-    });
+    })
 
-    $locationProvider.html5Mode({enabled:true,requirebase:false});
-})
+    $locationProvider.html5Mode({enabled:true,requirebase:false})
+});
 

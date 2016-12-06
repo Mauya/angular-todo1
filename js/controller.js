@@ -1,3 +1,4 @@
+
 angular.module('RouteControllers', [])
     .controller('HomeController',['$scope', function($scope){
         $scope.title = "Welcome To Swing Crew!";    
@@ -107,37 +108,3 @@ var media = [
         $scope.audio.addEventListener('pause', function(){ $rootScope.$broadcast('audio.pause', this); });
         $scope.audio.addEventListener('timeupdate', function(){ $rootScope.$broadcast('audio.time', this); });
         $scope.audio.addEventListener('ended', function(){ $rootScope.$broadcast('audio.ended', this); $scope.next(); });
-
-        // set track & play it
-        $rootScope.$on('audio.set', function(r, file, info, currentNum, totalNum){
-          var playing = !$scope.audio.paused;
-          $scope.audio.src = file;
-          var a = playing ? $scope.audio.play() : $scope.audio.pause();
-          $scope.info = info;
-          $scope.currentNum = currentNum;
-          $scope.totalNum = totalNum;
-        });
-
-        // update display of things - makes time-scrub work
-        setInterval(function(){ $scope.$apply(); }, 500);
-      },      
-    };
-  })
-
-.controller('VideoController', function ($scope){
-
-})
-
-.controller('PhotoController', function ($scope){
-  
-})
-
-
-.controller("ContactController", function(){
-  var contact = {
-    address:"22 Old Lane, Dublin, Ireland TY6 LP16,",
-    email:"symphonycrew@sc.ie",
-    telephone: "xx xxx xxxx"
-  };
-  $scope.contact=contact;
-});
