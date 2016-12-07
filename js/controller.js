@@ -1,7 +1,7 @@
-angular.module('RouteControllers',[])
-  .controller('HomeController',['$scope', function($scope){
+angular.module('BandApp',[])
+  .controller('HomeController', function($scope, $http){
     $scope.title = "Welcome To Swing Crew!";    
-    $scope.myInterval = 5000;
+    $scope.myInterval = 3000;
     $scope.slides= [
       {
         image: "images/swing1.jpg"
@@ -16,7 +16,7 @@ angular.module('RouteControllers',[])
         image: "images/swing4.jpg"
       }
     ];
-  }])
+  })
   .controller('navController', function($scope,$location){
     $scope.isactive= function(destination){
       return destination === $location.path();
@@ -26,8 +26,8 @@ angular.module('RouteControllers',[])
 .controller(['AboutController', function($scope){
   $scope.members=[
     {
-    "name":"member one",
-    "img":"images/member1.jpg"
+      "name":"member one",
+      "img":"images/member1.jpg"
     },
 
     {
