@@ -1,4 +1,4 @@
-angular.module('BandApp',[])
+angular.module('RouteControllers', [])
   .controller('HomeController', function($scope, $http){
     $scope.title = "Welcome To Swing Crew!";    
     $scope.myInterval = 3000;
