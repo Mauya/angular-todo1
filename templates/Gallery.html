@@ -1,10 +1,10 @@
 <div id="gallery" ng-controller="GalleryController">
   <h1>{{title}}</h1>  
-    <ol ng-model="mediaList in media">
-    <a href="media/{{mediaList}}">
-      {{music}}
-      {{visual}}
-      {{pict}}
+    <ul ng-options="mediaList in media">
+    <a href="
+      {{mediaList.music}}
+      {{mediaList.visual}}
+      {{mediaList.pict}}">
     </a>
-    </ol>
-
+    </ul>
+</div>

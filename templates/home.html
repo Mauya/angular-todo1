@@ -5,8 +5,9 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <carousel interval="myInterval">
-        <slide id="slide" ng-repeat="slide in slides" active="slide.active">
-        <img ng-src={{slide.image}} alt="{{slide.image}}">    </slide>
+        <div id="slide" ng-repeat="slide in slides" active="slide.active">
+        <img ng-src={{slide.image}} alt="{{slide.caption}}">
+        </div>
 	    </carousel>
   	</div>
 	</div>

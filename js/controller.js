@@ -4,16 +4,24 @@ angular.module('BandApp',[])
     $scope.myInterval = 3000;
     $scope.slides= [
       {
-        image: "images/swing1.jpg"
+        image: "images/sjband.jpg"
+        caption: "wedding1"
       },
       {
-        image: "images/swing2.jpg"
+        image: "images/sjband.jpg"
+        caption: "wedding2"
       },
       {
-        image: "images/swing3.jpg"
+        image: "images/sjband.jpg"
+        caption: "Social3"
       },
       {
-        image: "images/swing4.jpg"
+        image: "images/sjband.jpg"
+        caption: "Hotelgig4"
+      },
+      {
+        image: "images/sjband.jpg"
+        caption: "Hotelgig5"
       }
     ];
   })
@@ -27,27 +35,32 @@ angular.module('BandApp',[])
   $scope.members=[
     {
       "name":"member one",
-      "img":"images/member1.jpg"
+      "img":"images/member.jpg",
+      "details":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate."
     },
 
     {
       "name":"member Two",
-      "img":"images/member2.jpg"
+      "img":"images/member.jpg",
+      "details":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate."
     },
 
     {
       "name":"member Three",
-      "img":"images/member3.jpg"
+      "img":"images/member.jpg",
+      "details":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate."
     },
     
     {
       "name":"member Four",
-      "img":"images/member4.jpg"
+      "img":"images/member.jpg",
+      "details":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate."
     },
 
     {
       "name":"member Five",
-      "img":"images/member5.jpg"
+      "img":"images/member.jpg",
+      "details":"Duo Reges: constructio interrete. Odium autem et invidiam facile vitabis. Et quidem, inquit, vehementer errat; Quid enim est a Chrysippo praetermissum in Stoicis? Unum est sine dolore esse, alterum cum voluptate."
     },  
   ];
 
@@ -73,32 +86,46 @@ angular.module('BandApp',[])
   }
 })
 
-.controller("MediaController", function($Scope){
+  .controller("MediaController", function($Scope){
 
-  var media = [
-  {
-  title:"Media",
-    mediaList:[
-      {Audio:"Music"},
-      {Visual:"Video"},
-      {Pict:"Photos"}
-
-    ]
+    var media = [
+    {
+    title:"Media",
+      mediaList:[
+        {Audio:"Music"},
+        {Visual:"Video"},
+        {Pict:"Photos"
+    ];
 }]
   $scope.media=media;
 })
-.controller('MusicController', function ($scope){
 
-})
+  .controller("MusicController",function($scope,ngAudio){
+    $scope.music = ngAudio.load([
+    {Audio:"music/Caravan palace - Dramophone.mp3"}
+    {Audio:"music/Don't Stop - Little Violet.mp3"}
+    {Audio:"music/Parov Stelar - Booty Swing.mp3"}
+    {Audio:"music/Parov Stelar - Catgroove.mp3"}
+    {Audio:"music/Sing Sing Sing - Benny Goodman.mp3"}
+    {Audio:"music/Swingrowers - That's Right.mp3"}
+    ]);
+  })
 
-.controller('VideoController', function ($scope){
+  .controller('VideoController', function ($scope){
 
-})
+  })
 
 .controller('PhotoController', function ($scope){
-  
+  $scope.images= [
+    {img: "images/photo.jpg"}
+    {img: "images/photo.jpg"}
+    {img: "images/photo.jpg"}
+    {img: "images/photo.jpg"}
+    {img: "images/photo.jpg"}
+    {img: "images/photo.jpg"}
+    {img: "images/photo.jpg"}
+  ];
 })
-
 
 .controller("ContactController", function(){
   var contact = {
