@@ -4,23 +4,23 @@ angular.module('RouteControllers', [])
     $scope.myInterval = 3000;
     $scope.slides= [
       {
-        image: "images/sjband.jpg"
+        image: "images/sjband.jpg",
         caption: "wedding1"
       },
       {
-        image: "images/sjband.jpg"
+        image: "images/sjband.jpg",
         caption: "wedding2"
       },
       {
-        image: "images/sjband.jpg"
+        image: "images/sjband.jpg",
         caption: "Social3"
       },
       {
-        image: "images/sjband.jpg"
+        image: "images/sjband.jpg",
         caption: "Hotelgig4"
       },
       {
-        image: "images/sjband.jpg"
+        image: "images/sjband.jpg",
         caption: "Hotelgig5"
       }
     ];
@@ -94,15 +94,15 @@ angular.module('RouteControllers', [])
       mediaList:[
         {Audio:"Music"},
         {Visual:"Video"},
-        {Pict:"Photos"
-    ];
+        {Pict:"Photos"}
+    ]
 }]
   $scope.media=media;
 })
 
   .controller("MusicController",function($scope,ngAudio){
     $scope.music = ngAudio.load([
-    {Audio:"music/Caravan palace - Dramophone.mp3"}
+    {Audio:"music/Caravan palace - Dramophone.mp3"},
     {Audio:"music/Don't Stop - Little Violet.mp3"}
     {Audio:"music/Parov Stelar - Booty Swing.mp3"}
     {Audio:"music/Parov Stelar - Catgroove.mp3"}
