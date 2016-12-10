@@ -1,7 +1,7 @@
 
 var app = angular   
     .module('BandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'picardy.fontawesome', 'ngAudio'])
-    app.config (function($routeProvider, $locationProvider){ 
+    BandApp.config (function($routeProvider, $locationProvider){ 
     $routeProvider
     .when('/home', {
         templateUrl: 'templates/home.html',

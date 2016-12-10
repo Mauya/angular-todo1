@@ -1,5 +1,5 @@
 angular.module('RouteControllers', [])
-  .controller('HomeController', function($scope, $http){
+  .controller('HomeController', function($scope){
     $scope.title = "Welcome To Swing Crew!";    
     $scope.myInterval = 3000;
     $scope.slides= [
@@ -102,12 +102,12 @@ angular.module('RouteControllers', [])
 
   .controller("MusicController",function($scope,ngAudio){
     $scope.music = ngAudio.load([
-    {Audio:"music/Caravan palace - Dramophone.mp3"},
-    {Audio:"music/Don't Stop - Little Violet.mp3"}
-    {Audio:"music/Parov Stelar - Booty Swing.mp3"}
-    {Audio:"music/Parov Stelar - Catgroove.mp3"}
-    {Audio:"music/Sing Sing Sing - Benny Goodman.mp3"}
-    {Audio:"music/Swingrowers - That's Right.mp3"}
+    {Audio:"music/26886.mp3"},
+    {Audio:"music/26886.mp3"},
+    {Audio:"music/26886.mp3"},
+    {Audio:"music/26886.mp3"},
+    {Audio:"music/26886.mp3"},
+    {Audio:"music/26886.mp3"}
     ]);
   })
 
@@ -117,12 +117,12 @@ angular.module('RouteControllers', [])
 
 .controller('PhotoController', function ($scope){
   $scope.images= [
-    {img: "images/photo.jpg"}
-    {img: "images/photo.jpg"}
-    {img: "images/photo.jpg"}
-    {img: "images/photo.jpg"}
-    {img: "images/photo.jpg"}
-    {img: "images/photo.jpg"}
+    {img: "images/photo.jpg"},
+    {img: "images/photo.jpg"},
+    {img: "images/photo.jpg"},
+    {img: "images/photo.jpg"},
+    {img: "images/photo.jpg"},
+    {img: "images/photo.jpg"},
     {img: "images/photo.jpg"}
   ];
 })

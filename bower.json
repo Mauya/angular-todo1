@@ -27,7 +27,8 @@
   "dependencies": {
     "angular-socialshare": "angularjs-socialshare#^2.3.3",
     "font-awesome": "^4.7.0",
-    "angular-audio": "^1.7.3"
+    "angular-audio": "^1.7.3",
+    "components-font-awesome": "^4.7.0"
   },
   "resolutions": {
     "angular": ">=1.2 < 1.5"
