@@ -1,6 +1,7 @@
-<h3>Band Members</h3>
-<div class="container">
-  <div ng-controller="AboutController">  
+
+  <div ng-controller="AboutController">
+    <h3>Band Members</h3>
+      <div class="container">  
         <ul>
           <li ng-repeat="member in members">
             <img ng-src="member.image" alt="member.name" class="img-thumnail img-responsive" id="about-image">
@@ -14,7 +15,7 @@
           </li>          
         </ul>
       </div> 
-    </div>
+  </div>
 
   <div>
     <h3> Subsribe for updates</h3>     
@@ -23,7 +24,7 @@
           <label for="name" class="col-sm-2 control-label">Name</label>
           <div class="col-sm-6">
             <input type="text" name="name" id="name" class="form-control" ng-model="obj.name" required>
-            <p ng-show="form.name.$invalid && form.name.$dirty" class="help-block">Name is required</p>
+            <p ng-show="form.name.$invalid && form.name.$dirty" placeholder="Name is required"></p>
           </div>
         </div>
         <div class="form-group" ng-class="{ 'has-error' : form.username.$invalid }">
