@@ -5,22 +5,27 @@ angular.module('RouteControllers', [])
     $scope.slides= [
       {
         image: "images/sjband.jpg",
+        id: 0,
         caption: "wedding1"
       },
       {
         image: "images/sjband.jpg",
+        id: 1,
         caption: "wedding2"
       },
       {
         image: "images/sjband.jpg",
+        id:2,
         caption: "Social3"
       },
       {
         image: "images/sjband.jpg",
+        id:3,
         caption: "Hotelgig4"
       },
       {
         image: "images/sjband.jpg",
+        id: 4,
         caption: "Hotelgig5"
       }
     ];

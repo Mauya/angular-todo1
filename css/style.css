@@ -32,11 +32,25 @@ ul.topnav li a {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-#slide{
+slide {
     width:200px;
     height:200px;
     overflow:hidden;
     position:relative;
+}
+#slides_control > div{
+  height: 200px;
+}
+img{
+  margin:auto;
+  width: 400px;
+}
+#slides_control {
+  position:absolute;
+  width: 400px;
+  left:50%;
+  top:30px;
+ margin-left:-200px;
 }
 
 #about-image{
