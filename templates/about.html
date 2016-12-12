@@ -23,22 +23,22 @@
         <div class="form-group" ng-class="{ 'has-error' : form.name.$invalid && form.name.$dirty }">
           <label for="name" class="col-sm-2 control-label">Name</label>
           <div class="col-sm-6">
-            <input type="text" name="name" id="name" class="form-control" ng-model="obj.name" required>
-            <p ng-show="form.name.$invalid && form.name.$dirty" placeholder="Name is required"></p>
+            <input type="text" name="name" id="name" class="form-control" ng-model="obj.name" placeholder="Name is required" required>
+            <p ng-show="form.name.$invalid && form.name.$dirty"></p>
           </div>
         </div>
         <div class="form-group" ng-class="{ 'has-error' : form.username.$invalid }">
           <label for="username" class="col-sm-2 control-label">Username</label>
           <div class="col-sm-6">
             <input type="text" name="username" id="username" class="form-control" ng-model="subscribe.username"
-                   ng-minlength="3" ng-maxlength="6">
-            <p ng-show="form.username.$invalid" class="help-block">Username must be between 3 and 8 characters</p>
+                   ng-minlength="3" ng-maxlength="6" placeholder="Username must be between 3 and 8 characters">
+            <p ng-show="form.username.$invalid" class="help-block"></p>
           </div>
         </div>
         <div class="form-group" ng-class="{ 'has-error' : form.email.$invalid }">
           <label for="email" class="col-sm-2 control-label">Email</label>
           <div class="col-sm-6">
-            <input type="email" name="email" id="email" class="form-control" ng-model="subscribe.email">
+            <input type="email" name="email" id="email" class="form-control" ng-model="subscribe.email" placeholder="Enter valid email">
             <p ng-show="form.email.$invalid" class="help-block">Email is not valid</p>
           </div>
         </div>
