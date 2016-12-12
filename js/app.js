@@ -1,7 +1,6 @@
 
-var app = angular   
-    .module('bandApp', ['ngRoute', 'RouteControllers', 'ui.bootstrap', 'ngAudio'])
-    .config (function($routeProvider, $locationProvider){ 
+var app = angular.module('bandApp', ['ngRoute', 'RouteControllers'])
+    app.config (function($routeProvider, $locationProvider){ 
     $routeProvider
     .when('/home', {
         templateUrl: 'templates/home.html',
@@ -37,8 +36,8 @@ var app = angular
     })    
     .otherwise({
         redirectTo: "/home"
-    })
+    });
 
-    $locationProvider.html5Mode({enabled:true,requirebase:false})
+    $locationProvider.html5Mode({enabled:true,requirebase:false});
 });
 

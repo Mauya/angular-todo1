@@ -1,6 +1,7 @@
 
-<div ng-controller="HomeController" id="slides_control">
+<div id="slides_control">
 <div>
+  <h1 ng-model="title">{{title}}</h1>
   <uib-carousel interval="setInterval">
     <uib-slide ng-repeat="slide in slides track by slide.id" active="slide.active:0">
       <img class="carousel-images" ng-src="{{slide.image}}" alt="{{slide.id}}" style=" width:300px height:200px">

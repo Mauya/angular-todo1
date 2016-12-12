@@ -1,45 +1,40 @@
 var app = angular.module('bandApp', ['RouteControllers']);
-  app.controller('HomeController', ['$scope', function($scope) {
+  app.controller('HomeController', function($scope) {
     $scope.title = 'Welcome To Swing Crew!';    
     $scope.setInterval = 3000;
     $scope.slides= [
       {
         image: "images/sjband0.jpg",
         id: 0,
-        caption: "wedding1"
+        caption: "wedding0"
       },
       {
         image: "images/sjband1.jpg",
         id: 1,
-        caption: "wedding2"
+        caption: "wedding1"
       },
       {
         image: "images/sjband2.jpg",
         id:2,
-        caption: "Social"
+        caption: "Social2"
       },
       {
         image: "images/sjband3.jpg",
         id:3,
-        caption: "Hotelgig4"
+        caption: "Hotelgig3"
       },
       {
         image: "images/sjband4.jpg",
         id: 4,
-        caption: "Hotelgig5"
+        caption: "Hotelgig4"
       },
       {
         image: "images/sjband5.jpg",
         id: 5,
-        caption: "Socialgig"
+        caption: "Socialgig5"
       }
     ];
-  }])
-  //app.controller('navController', function($scope,$location){
-    //$scope.isactive= function(destination){
-      //return destination === $location.path();
-   // };
-  //})
+  });
   
 app.controller(['AboutController', function($scope){
   $scope.members=[
