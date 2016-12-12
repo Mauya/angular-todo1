@@ -1,8 +1,7 @@
+angular.module('bandApp', ['ngRoute', 'RouteControllers', 'UserService']);
 
-var app = angular.module('bandApp', ['ngRoute', 'RouteControllers'])
-    app.config (function($routeProvider, $locationProvider){ 
-    $routeProvider
-    .when('/home', {
+angular.module('bandApp').config(function($routeProvider) {
+    $routeProvider.when('/', {
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
     })
