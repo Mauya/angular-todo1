@@ -1,4 +1,4 @@
-angular.module('bandApp', ['ngRoute', 'RouteControllers', 'UserService']);
+angular.module('bandApp', ['ngRoute', 'RouteControllers' 'ui bootstrap']);
 
 angular.module('bandApp').config(function($routeProvider) {
     $routeProvider.when('/', {
