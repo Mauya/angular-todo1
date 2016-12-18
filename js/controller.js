@@ -1,5 +1,5 @@
-var app = angular.module('bandApp', ['RouteControllers']);
-  app.controller('HomeController', function($scope) {
+angular.module('RouteControllers', [])
+  .controller('HomeController', function($scope) {
     $scope.title = 'Welcome To Swing Crew!';    
     $scope.setInterval = 3000;
     $scope.slides= [

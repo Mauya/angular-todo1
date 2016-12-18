@@ -1,6 +1,6 @@
-angular.module('bandApp', ['ngRoute', 'RouteControllers' 'ui bootstrap']);
-
-angular.module('bandApp').config(function($routeProvider) {
+var app = angular.module('bandApp', ['ngRoute', 'RouteControllers', 'ui bootstrap', 'angular-carousel', 'ngAudio', 'picardy.fontawesome'])
+angular.module('bandApp').config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
@@ -34,9 +34,9 @@ angular.module('bandApp').config(function($routeProvider) {
         controller: 'PhotoController'
     })    
     .otherwise({
-        redirectTo: "/home"
+        redirectTo: '/'
     });
 
-    $locationProvider.html5Mode({enabled:true,requirebase:false});
-});
+    $locationProvider.html5Mode({enabled:true,requirebase:false})
+}]);
 
