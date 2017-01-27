@@ -1,4 +1,4 @@
-var app = angular.module('bandApp', ['ngRoute', 'RouteControllers', 'ui bootstrap', 'angular-carousel', 'ngAudio', 'picardy.fontawesome'])
+var app = angular.module('bandApp', ['ngRoute', 'RouteControllers']);
 angular.module('bandApp').config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
@@ -37,6 +37,6 @@ angular.module('bandApp').config(['$routeProvider', '$locationProvider',
         redirectTo: '/'
     });
 
-    $locationProvider.html5Mode({enabled:true,requirebase:false})
+    $locationProvider.html5Mode(true);
 }]);
 
